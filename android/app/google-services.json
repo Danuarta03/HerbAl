@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "773295279022",
+    "project_id": "herbal-ab41a",
+    "storage_bucket": "herbal-ab41a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773295279022:android:1636730fd2900d0187963f",
+        "android_client_info": {
+          "package_name": "com.example.herb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKXJux3h5DaDiTiqtls4fdSUqf9XVdZH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773295279022:android:6cc020064aeec07f87963f",
+        "android_client_info": {
+          "package_name": "com.example.herbal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKXJux3h5DaDiTiqtls4fdSUqf9XVdZH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
