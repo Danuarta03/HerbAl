@@ -37,7 +37,6 @@ class _DetailProdukState extends State<DetailProduk> {
     }
   }
 
-
   void toggleFavorite() {
     setState(() {
       isFavorited = !isFavorited;
@@ -53,16 +52,16 @@ class _DetailProdukState extends State<DetailProduk> {
       );
       return;
     }
-  
-  final keranjang = KeranjangModel(
+
+    final keranjang = KeranjangModel(
       id_keranjang: 0,
       idUser: userId,
       idProduk: widget.produk.id_produk,
       jumlah: jumlah,
       produk: widget.produk,
     );
-  
-  try {
+
+    try {
       final apiService = ApiServiceKeranjang();
       final response = await apiService.tambahKeKeranjang(keranjang);
 
@@ -87,18 +86,21 @@ class _DetailProdukState extends State<DetailProduk> {
       );
     }
   }
-  
+
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     final produk = widget.produk;
 
     return Scaffold(
-      backgroundColor: isDarkMode ? AppColors.darkScaffoldColor : AppColors.lightScaffoldColor,
+      backgroundColor: isDarkMode
+          ? AppColors.darkScaffoldColor
+          : AppColors.lightScaffoldColor,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(20),
         child: AppBar(
-          backgroundColor: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
+          backgroundColor:
+              isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
           elevation: 0,
           toolbarHeight: 20,
           automaticallyImplyLeading: false,
@@ -121,7 +123,9 @@ class _DetailProdukState extends State<DetailProduk> {
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
+                            color: isDarkMode
+                                ? AppColors.darkPrimary
+                                : AppColors.lightPrimary,
                             borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(30),
                               bottomRight: Radius.circular(30),
@@ -144,7 +148,9 @@ class _DetailProdukState extends State<DetailProduk> {
                           width: 50,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
+                            color: isDarkMode
+                                ? AppColors.darkPrimary
+                                : AppColors.lightPrimary,
                             borderRadius: const BorderRadius.only(
                               topRight: Radius.circular(30),
                               bottomLeft: Radius.circular(30),
@@ -178,7 +184,8 @@ class _DetailProdukState extends State<DetailProduk> {
               width: MediaQuery.of(context).size.width * 0.9,
               margin: const EdgeInsets.only(bottom: 16),
               decoration: BoxDecoration(
-                color: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
+                color:
+                    isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
                 borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
@@ -221,7 +228,9 @@ class _DetailProdukState extends State<DetailProduk> {
               padding: const EdgeInsets.all(12),
               width: MediaQuery.of(context).size.width * 0.9,
               decoration: BoxDecoration(
-                color: isDarkMode ? AppColors.darkCardColor : AppColors.lightCardColor,
+                color: isDarkMode
+                    ? AppColors.darkCardColor
+                    : AppColors.lightCardColor,
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
@@ -233,7 +242,8 @@ class _DetailProdukState extends State<DetailProduk> {
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isDarkMode ? AppColors.darkTextColor : Colors.black,
+                      color:
+                          isDarkMode ? AppColors.darkTextColor : Colors.black,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -247,7 +257,8 @@ class _DetailProdukState extends State<DetailProduk> {
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isDarkMode ? AppColors.darkTextColor : Colors.black,
+                      color:
+                          isDarkMode ? AppColors.darkTextColor : Colors.black,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -261,7 +272,8 @@ class _DetailProdukState extends State<DetailProduk> {
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isDarkMode ? AppColors.darkTextColor : Colors.black,
+                      color:
+                          isDarkMode ? AppColors.darkTextColor : Colors.black,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -275,7 +287,8 @@ class _DetailProdukState extends State<DetailProduk> {
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontSize: 16,
-                      color: isDarkMode ? AppColors.darkTextColor : Colors.black,
+                      color:
+                          isDarkMode ? AppColors.darkTextColor : Colors.black,
                     ),
                   ),
                 ],
@@ -292,7 +305,11 @@ class _DetailProdukState extends State<DetailProduk> {
             Expanded(
               flex: 2,
               child: IconButton(
-                icon: Icon(Icons.chat, color: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary, size: 28),
+                icon: Icon(Icons.chat,
+                    color: isDarkMode
+                        ? AppColors.darkPrimary
+                        : AppColors.lightPrimary,
+                    size: 28),
                 onPressed: () {},
               ),
             ),
@@ -304,20 +321,24 @@ class _DetailProdukState extends State<DetailProduk> {
             Expanded(
               flex: 2,
               child: IconButton(
-                icon: Icon(Icons.shopping_cart, color: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary, size: 28),
+                icon: Icon(Icons.shopping_cart,
+                    color: isDarkMode
+                        ? AppColors.darkPrimary
+                        : AppColors.lightPrimary,
+                    size: 28),
                 onPressed: () {
-                    handleTambahKeKeranjang();
+                  handleTambahKeKeranjang();
                 },
               ),
             ),
             Expanded(
               flex: 6,
               child: ElevatedButton(
-                onPressed: () {
-                
-                },
+                onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: isDarkMode ? AppColors.darkPrimary : AppColors.lightPrimary,
+                  backgroundColor: isDarkMode
+                      ? AppColors.darkPrimary
+                      : AppColors.lightPrimary,
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
